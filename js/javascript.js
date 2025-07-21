@@ -50,7 +50,6 @@ function playRound(humanChoice, computerChoice) {
             gameStatus.textContent = `You WON that round - ${humanChoice}`+
                 ` beats ${computerChoice}`;
             humanScore ++;
-            gameScore.textContent = `You: ${humanScore} Computer: ${computerScore}`;
         }
     else if ((computerChoice === ROCK && humanChoice === SCISSORS) ||
         (computerChoice === SCISSORS && humanChoice === PAPER) ||
@@ -58,17 +57,15 @@ function playRound(humanChoice, computerChoice) {
             gameStatus.textContent = `You LOST that round - ${humanChoice}`+
                 ` loses to ${computerChoice}`;
             computerScore ++;
-            gameScore.textContent = `You: ${humanScore} Computer: ${computerScore}`;
         }
-    else
-        winner = `missing h${humanChoice}:c${computerChoice}`;
+    gameScore.textContent = `You: ${humanScore} Computer: ${computerScore}`;
 
     if (computerScore >= WINNING_SCORE) {
-        gameStatus.textContent += `\nCOMPUTER wins the GAME`;
+        gameStatus.textContent += `\nCOMPUTER won the GAME`;
         gameReset(false);
     }
     else if (humanScore >= WINNING_SCORE) {
-        gameStatus.textContent += `\nYOU win the GAME.  Well done`;
+        gameStatus.textContent += `\nYOU won the GAME.  Well done`;
         gameReset(false);
     }
 }
