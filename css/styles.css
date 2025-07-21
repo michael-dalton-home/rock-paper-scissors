@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-area {
+    background-color: rgb(37, 32, 72);
+
+    /* Center our header within the content panel */
+    text-align: center;
+}
+.header-area, .body-area {
+    padding: 20px;
+    width: 100vw;
+
+    /* Center content panel on viewport */
+    display: flex;
+    justify-content: center;
+
+    & .header-content, .body-content {
+        width: 600px;
+    }
+}
+
+#button-panel {
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding: 15px;
+
+    & p {
+        padding-bottom: 5px;
+    }
+
+    & .button {
+        padding: 5px;
+        min-width: 75px;
+    }
+}
