@@ -23,18 +23,28 @@
     }
 }
 
-#button-panel {
+#button-panel, #status-panel {
     border: 1px solid;
     border-radius: 5px;
     border-color: darkgray;
     padding: 15px;
+    margin-bottom: 4px;
 
-    & p {
+    & > p {
         padding-bottom: 5px;
     }
 
     & .button {
         padding: 5px;
         min-width: 75px;
+    }
+
+    & > #score-panel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & > #game-status {
+        white-space: pre-wrap;
     }
 }
